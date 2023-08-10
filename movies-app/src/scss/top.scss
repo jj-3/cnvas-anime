@@ -1,0 +1,61 @@
+@import '../_modules/variables';
+
+/* ==== Top ==== */
+
+.block2col {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cardWrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	@media screen and (min-width: $breakPc){
+		width: 100%;
+		max-width: 800px;
+
+	}
+}
+
+.card {
+	margin: 16px auto 0;
+	opacity: 0;
+	visibility: hidden;
+	@media screen and (min-width: $breakPc){
+		width: 33%;
+	}
+	a {
+		transition: opacity .3s;
+		display: block;
+		text-align: center;
+	}
+	a:hover {
+		@media screen and (min-width: $breakPc){
+			opacity: .7;
+		}
+	}
+	img {
+		margin: 0 auto;
+	}
+	&.isFade {
+		opacity: 1;
+		visibility: visible;
+		// animation: scaleUp .3s ease 1s;
+		animation: scaleUp .5s ease-in-out;
+	}
+}
+
+@keyframes scaleUp {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(-7%, 7%) skewX(15deg);
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0,0) skewX(0);
+	}
+}

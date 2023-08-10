@@ -1,0 +1,65 @@
+@import '_variables.scss';
+
+/* ==== TypoGraphy ==== */
+
+.title {
+	font-size: 26px;
+	letter-spacing: .04em;
+	@media screen and (max-width: $breakSp) {
+		font-size: 18px;
+	}
+}
+.text {
+	font-size: 16px;
+	@media screen and (max-width: $breakSp){
+		font-size: 16px;
+	}
+	&:not(:first-child){
+		margin-top: 8px;
+	}
+	&--sm{
+		font-size: 14px;
+		@media screen and (max-width: $breakSp){
+			font-size: 12px;
+		}
+		&:not(:first-child){
+			margin-top: 6px;
+		}
+	}
+}
+.text-attr {
+	max-width: 500px;
+	border: solid 2px $subBlue2;
+	padding: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&_title {
+		font-size: 14px;
+		flex: 1
+	}
+	&_image {
+		margin-top: 10px;
+	}
+}
+
+#desc {
+	font-weight: bold;
+}
+
+#select {
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	padding: 15px 0;
+	@media screen and (min-width: $breakPc){
+		margin: 0 12px 0 0;
+	}
+	@media screen and (max-width: $breakSp) {
+		margin: 8px 6px 0;
+	}
+}
+
+.mvTitle {
+	font-weight: 700;
+}
